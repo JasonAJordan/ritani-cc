@@ -1,3 +1,11 @@
+##
+Steps for me,
+1. Make sure GET responses work and the data can be shown on the page
+2. Make it look nice 
+3. Make it so I can pull more than 70 github request per hour via the token. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

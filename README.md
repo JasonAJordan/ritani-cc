@@ -3,6 +3,7 @@ Steps for me,
 1. Make sure GET responses work and the data can be shown on the page
 2. Make it look nice 
 3. Make it so I can pull more than 70 github request per hour via the token. 
+4. Host it (prob Amazon Amp)
 
 
 

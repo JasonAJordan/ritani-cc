@@ -4,6 +4,7 @@ import './App.css';
 import React, { useState, useEffect } from "react"; 
 import Search from "./Search"; 
 import UserData from "./UserData";
+import Key from "./keys";
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
     fetch(`https://api.github.com/users/${github.login}/followers?page=${pageNumber}&per_page=15`,{
               method: "GET",
               headers: {
-                  Authorization: `token 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`, 
+                  Authorization: `token ${Key}`, 
               },
               })
               .then(response => response.json())

@@ -1,4 +1,5 @@
 import React, { useState } from "react"; 
+import Key from "./keys";
 
 function Search ({setGitHubData, fetchFollowers, setPage}){
     const [search, setSearch] = useState("");
@@ -14,7 +15,7 @@ function Search ({setGitHubData, fetchFollowers, setPage}){
         fetch(`https://api.github.com/users/${search}`,{
             method: "GET",
             headers: {
-                Authorization: `token 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`, 
+                Authorization: `token ${Key}`, 
               },
             })
             .then(response => response.json())

@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from "react"; 
+import React, { useState } from "react"; 
 
-function Search ({setGitHubData, setFollowers, fetchFollowers}){
+function Search ({setGitHubData, fetchFollowers, setPage}){
     const [search, setSearch] = useState("");
-
 
     function handleFormChange(event){
         setSearch(event.target.value);
     }
 
-    // function handleFormChange(event){
-    //     setFormData({...formData,
-    //     [event.target.name]: event.target.value
-    //     })
-    // }
 
     function handleSearch(event){
         event.preventDefault();
@@ -20,15 +14,15 @@ function Search ({setGitHubData, setFollowers, fetchFollowers}){
         fetch(`https://api.github.com/users/${search}`,{
             method: "GET",
             headers: {
-                'Content-Type': 'application/json',
+                Authorization: `token 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`, 
               },
             })
             .then(response => response.json())
             .then(data => {
-                setGitHubData(data)
+                setGitHubData(data);
                 handleFollowers(data);
+                setPage(1);
             })
-
     }
 
     function handleFollowers(github){
@@ -40,7 +34,7 @@ function Search ({setGitHubData, setFollowers, fetchFollowers}){
 
     return (
         <div>
-            Search Form: 
+            Github Search: 
 
             <form onSubmit={handleSearch}>
                 <input type="text" name="search" placeholder="Type in the username"

@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from "react"; 
+//import React, { useState, useEffect } from "react"; 
 
-function Search ({githubData, followers, page, setPage, fetchFollowers}){
+function Search ({githubData, followers, fetchFollowers, page, setPage}){
 
-    //const [loadedFollowers, setLoadFollowers] = useState(false);
-    function handleNextPage(num){
-        fetchFollowers(page + num);
-        setPage(page + num); 
+
+    function handlePageChange(event){
+        if (event.target.name === "prior"){
+            fetchFollowers(page - 1)
+            setPage(page - 1);
+        } else {
+            fetchFollowers(page + 1)
+            setPage(page + 1);
+        }
     }
 
     let followersMapped = [];
@@ -26,16 +31,25 @@ function Search ({githubData, followers, page, setPage, fetchFollowers}){
         } else {
 
             return (
-                <div>
-                    <h3>UserName: {githubData.login}</h3>
-                    <h3>Followers Count {githubData.followers}</h3>
+                <div >
+                    <div className="data">
+                        <h3>UserName: {githubData.login}</h3>
+                        <img src={githubData.avatar_url} width="160" height="160"/>
+                        <h4>Public Repos: {githubData.public_repos}</h4>
+                        <a href={githubData.html_url} rel="noreferrer">GitHub Page</a>
+                    </div>
+                    <div className="following">
+                        <h3>Followers Count: {githubData.followers}</h3>
+
+                        <div className="followingimgscontainer" >
+                            <h3> {followersMapped}</h3>
+                        </div>
+                        {(page === 1) ? null: 
+                            <button onClick={handlePageChange} name="prior">Prior Page</button>}
+                        {(followersMapped.length === 15) ? 
+                            <button onClick={handlePageChange} name="next">Next Page</button> : null}
+                    </div>
                     
-                    <h3> Followers: {followersMapped}</h3>
-                    {(page === 1) ? null: 
-                        <button onCLick={handleNextPage(-1)}>Prior Page</button>}
-                    {(followersMapped.length === 20) ? 
-                        <button onClick={handleNextPage(1)}>Next Page</button> : null}
-                    <h3>UserName: {githubData.login}</h3>
                     
                 </div>
             )
@@ -44,8 +58,7 @@ function Search ({githubData, followers, page, setPage, fetchFollowers}){
     } else {
         return (
             <div>
-                
-                <h3>Search a user</h3>
+                <h3>Search for any valid Github username!</h3>
             </div>
     
         );

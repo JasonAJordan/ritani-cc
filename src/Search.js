@@ -8,7 +8,6 @@ function Search ({setGitHubData, fetchFollowers, setPage}){
         setSearch(event.target.value);
     }
 
-
     function handleSearch(event){
         event.preventDefault();
     
@@ -32,7 +31,6 @@ function Search ({setGitHubData, fetchFollowers, setPage}){
         }
     }
 
-
     return (
         <div className="search">
             Github Search: 
@@ -47,8 +45,6 @@ function Search ({setGitHubData, fetchFollowers, setPage}){
                 </div>
 
             </form>
-
-            
 
         </div>
 

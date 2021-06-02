@@ -62,8 +62,6 @@ function Search ({githubData, followers, fetchFollowers, page, setPage}){
     
         );
     } 
-    
-
  
 
 }

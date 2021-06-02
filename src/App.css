@@ -8,12 +8,7 @@ body {
 
 .main { 
   margin: 25px; 
-  
   text-align: center;
-  /* border: solid;
-    border-color: rgb(0, 0, 0);
-    border-width: 2px;
-  padding: 2px; */
 }
 
 .intro {
@@ -51,9 +46,6 @@ body {
 .search-wrapper button:hover{
   background-color: azure
 }
-/* .following button:active{
-  background-color:#999999;
-  } */
 @media all and (max-width:30em){
      .search-wrapper button{
   display:block;
@@ -127,8 +119,6 @@ body {
 
 .dataContainer{
   margin: auto;
-  /* position: absolute; */
-  /* left: 22%; */
   min-height: 390px;
   height: 390px;
   max-width: 804px;
@@ -137,18 +127,12 @@ body {
   border-color: rgb(75, 182, 65);
   border-width: 2px;
   border-radius: 6px;
-  /* background-color: rgba(201, 201, 201, 0.712); */
+
 }
 
 
 .data { 
   float: left;
-  /* margin: auto; */
-  /* position: relative;
-  left: 10px; */
-  /* border: solid;
-  border-color: rgb(99, 146, 23);
-  border-width: 2px; */
   max-width: 300px; 
   width: 300px;
 
@@ -165,9 +149,6 @@ body {
 
 .following { 
   float: left;
-  /* border: solid;
-  border-color: rgb(40, 30, 82);
-  border-width: 2px; */
   max-width: 500px;
   width: 500px;
   font-family: 'Trebuchet MS', sans-serif;

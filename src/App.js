@@ -4,7 +4,7 @@ import './App.css';
 import React, { useState, useEffect } from "react"; 
 import Search from "./Search"; 
 import UserData from "./UserData";
-import Key from "./keys";
+import Key from "./keys"; //This is an gitignore file
 
 function App() {
 
@@ -12,7 +12,6 @@ function App() {
   const [followers, setFollowers] = useState(null);
   const [page, setPage] = useState(1);
   
-
 
   function fetchFollowers(pageNumber = 1, github = githubData ){
     fetch(`https://api.github.com/users/${github.login}/followers?page=${pageNumber}&per_page=15`,{

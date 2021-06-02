@@ -31,12 +31,12 @@ function Search ({githubData, followers, fetchFollowers, page, setPage}){
         } else {
 
             return (
-                <div >
+                <div className="dataContainer">
                     <div className="data">
                         <h3>UserName: {githubData.login}</h3>
                         <img src={githubData.avatar_url} width="160" height="160"/>
                         <h4>Public Repos: {githubData.public_repos}</h4>
-                        <a href={githubData.html_url} rel="noreferrer">GitHub Page</a>
+                        <a href={githubData.html_url} rel="noreferrer">GitHub Page Link</a>
                     </div>
                     <div className="following">
                         <h3>Followers Count: {githubData.followers}</h3>
@@ -45,12 +45,11 @@ function Search ({githubData, followers, fetchFollowers, page, setPage}){
                             <h3> {followersMapped}</h3>
                         </div>
                         {(page === 1) ? null: 
-                            <button onClick={handlePageChange} name="prior">Prior Page</button>}
-                        {(followersMapped.length === 15) ? 
-                            <button onClick={handlePageChange} name="next">Next Page</button> : null}
+                            <button onClick={handlePageChange} name="prior">Load Previous</button>}
+                        {/* Should think about an edge case */}
+                        {(githubData.followers > page * 15) ? 
+                            <button onClick={handlePageChange} name="next">Load More</button> : null}
                     </div>
-                    
-                    
                 </div>
             )
         }

@@ -126,11 +126,13 @@ body {
 }
 
 .dataContainer{
-  margin: 10px;
-  position: absolute;
-  left: 22%;
+  margin: auto;
+  /* position: absolute; */
+  /* left: 22%; */
   min-height: 390px;
-  max-width: 950px;
+  height: 390px;
+  max-width: 800px;
+  width: 800px;
   border: solid;
   border-color: rgb(75, 182, 65);
   border-width: 2px;
@@ -141,18 +143,20 @@ body {
 
 .data { 
   float: left;
+  /* margin: auto; */
   /* position: relative;
   left: 10px; */
   /* border: solid;
   border-color: rgb(99, 146, 23);
-  border-width: 2px;
-  max-width: 300px; */
+  border-width: 2px; */
+  max-width: 300px; 
   width: 300px;
 
   font-family: 'Trebuchet MS', sans-serif;
   font-size: 18px;
   color: black;
 }
+
 .data a {
   color: #009688;
   font-family: 'Trebuchet MS', sans-serif;
@@ -164,7 +168,8 @@ body {
   /* border: solid;
   border-color: rgb(40, 30, 82);
   border-width: 2px; */
-  max-width: 520px;
+  max-width: 500px;
+  width: 500px;
   font-family: 'Trebuchet MS', sans-serif;
 } 
 

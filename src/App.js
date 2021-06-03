@@ -1,10 +1,9 @@
-//import logo from './logo.svg';
 import './App.css';
 
-import React, { useState, useEffect } from "react"; 
+import React, { useState } from "react"; 
 import Search from "./Search"; 
 import UserData from "./UserData";
-import Key from "./keys"; //This is an gitignore file
+import Key from "./keys"; //This file is included in the gitignore file
 
 function App() {
 

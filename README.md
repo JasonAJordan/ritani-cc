@@ -14,3 +14,5 @@ Styling was loosely based after Ritani's website design.
 ### Others/Misc 
 
 My github API token is on the gitignore file, if you want to run this app on your machine you must make your own github API token and create the files which stores that token. 
+
+For me I made a file called keys.js which stored the api Key which get's called upon via "import Key from "./keys";" however keys.js is in my gitignore file. 
